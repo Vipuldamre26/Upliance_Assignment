@@ -1,0 +1,27 @@
+.counter{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0.5rem 0;
+}
+
+.counter .counter-buttons{
+    width: 60%;
+    margin: 0.7rem auto;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: rgb(255, 59, 59);
+}
+
+@media (max-width: 780px) {
+    .counter{
+        width: 100%;
+    }
+}

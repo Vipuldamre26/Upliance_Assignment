@@ -1,0 +1,17 @@
+.uniqueid{
+    width: 50%;
+    height: 50%;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 780px) {
+    .uniqueid{
+        width: 100%;
+    }
+}

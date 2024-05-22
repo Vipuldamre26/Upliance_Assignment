@@ -1,0 +1,20 @@
+:root {
+    --subtlepink: rgba(238, 174, 202, 1);
+    --subtleblue: rgba(148, 187, 233, 1);
+    --buttonsize: 250px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body,
+html {
+    height: 100%;
+    /* display: grid; */
+    background: rgb(238, 174, 202);
+    background: linear-gradient(30deg, var(--subtlepink) 0%, var(--subtleblue) 100%);
+}
