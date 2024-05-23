@@ -12,8 +12,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-window.onbeforeunload
-
 
 const Form = () => {
 
@@ -22,10 +20,6 @@ const Form = () => {
     const submitedData = useSelector(state => state.form.data)
     console.log(submitedData);
 
-    // const [ name, setName ] = useState('');
-    // const [ email, setEmail ] = useState('');
-    // const [ number, setNumber ] = useState('');
-    // const [ address, setAddress ] = useState('');
 
     const [ data, setData ] = useState([]);
     const [ isFormFill, setIsFormFill ] = useState(false);
@@ -34,6 +28,9 @@ const Form = () => {
     const emailRef = useRef('');
     const numberRef = useRef('');
     const addressRef = useRef('');
+
+
+    // *************************************************************
 
     const submitData = (e) => {
 
@@ -55,7 +52,12 @@ const Form = () => {
 
             dispatch(submit([userData]));
             localStorage.setItem('userData', JSON.stringify([userData]));
-            navigate('/uniqueid')
+
+            setIsFormFill(false);
+            toast('Redirecting to User Data page');
+            setTimeout(() => {
+                navigate('/uniqueid')
+            }, [1500]);
 
         }
         else{
@@ -67,10 +69,22 @@ const Form = () => {
     // ************************************************************
 
     useEffect(() => {
-        if(isFormFill){
-            
-        }
-    }, [])
+        const checkBeforeClose = (e) => {
+            if(isFormFill){
+                const message = 'You have unsaved changes, are you sure to leave';
+
+                e.returnValue = message;
+                return message;
+            }
+        } ;
+
+        window.addEventListener('beforeunload', checkBeforeClose);
+
+        return () => {
+            window.removeEventListener('beforeunload', checkBeforeClose);
+        };
+
+    }, [isFormFill]);
 
     
 
@@ -83,28 +97,28 @@ const Form = () => {
                         <span className="icon">
                             <BsFilePersonFill />
                         </span>
-                        <input onChange={setIsFormFill(true)} ref={nameRef} type='text' required />
+                        <input onChange={() => setIsFormFill(true)} ref={nameRef} type='text' required />
                         <label>Name</label>
                     </div>
                     <div className="inputbox">
                         <span className="icon">
                             <IoMdMail />
                         </span>
-                        <input onChange={setIsFormFill(true)} ref={emailRef} type="email" required />
+                        <input onChange={() => setIsFormFill(true)} ref={emailRef} type="email" required />
                         <label>Email</label>
                     </div>
                     <div className="inputbox">
                         <span className="icon">
                             <FaPhoneSquareAlt />
                         </span>
-                        <input onChange={setIsFormFill(true)} ref={numberRef} type="phone" required />
+                        <input onChange={() => setIsFormFill(true)} ref={numberRef} type="phone" required />
                         <label>Phone</label>
                     </div>
                     <div className="inputbox">
                         <span className="icon">
                             <FaAddressCard />
                         </span>
-                        <input onChange={setIsFormFill(true)} ref={addressRef} type='text' required />
+                        <input onChange={() => setIsFormFill(true)} ref={addressRef} type='text' required />
                         <label>Address</label>
                     </div>
                     <button type='submit' onClick={(e) => submitData(e)}>Submit</button>

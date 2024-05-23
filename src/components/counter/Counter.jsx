@@ -38,7 +38,7 @@ const Counter = () => {
             lebel: 'Poll',
             data: [40, num],
             backgroundColor: ['rgb(255, 59, 59)', 'rgb(255, 99, 132)'],
-            borderColor: ['rgb(255, 99, 132)', 'white']
+            borderColor: ['rgb(255, 99, 132)', 'white'],
         }]
     }
 
@@ -47,8 +47,10 @@ const Counter = () => {
             legend: {
                 labels: {
                     font: {
-                        size: 14
-                    }
+                        size: 16,
+                        color: 'blue'
+                    },
+                    color:'white',
                 }
             }
         }

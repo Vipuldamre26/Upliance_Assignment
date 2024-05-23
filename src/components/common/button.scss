@@ -1,5 +1,7 @@
-$subtlepink: rgba(238, 174, 202, 1);
-$subtleblue: rgba(148, 187, 233, 1);
+$subtlepink: rgb(255, 206, 206);
+// $subtlepink: rgb(170, 236, 255);
+$subtleblue: rgb(255, 100, 100);
+// $subtleblue: rgb(0, 204, 255);
 $buttonsize: 250px;
 
 
@@ -12,7 +14,7 @@ button {
     height: 2.8rem;
     background: rgb(238, 174, 202);
     background: linear-gradient(30deg, $subtlepink 0%, $subtleblue 100%);
-    color: rgb(255, 116, 116);
+    color: rgb(255, 255, 255);
     font-size: 3.6em;
     font-weight: 600;
     display: flex;

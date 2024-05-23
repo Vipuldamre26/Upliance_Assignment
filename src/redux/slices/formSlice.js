@@ -11,9 +11,9 @@ const getData  = () => {
     }
     else{
         oldData = JSON.parse(localStorage.getItem('userData'));
-        console.log('====================================');
-        console.log('oldData', oldData);
-        console.log('====================================');
+        // console.log('====================================');
+        // console.log('oldData', oldData);
+        // console.log('====================================');
     }
     
 

@@ -1,0 +1,193 @@
+.navbar {
+    width: 97%;
+    height: 5rem;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1.1rem auto 0 auto;
+    border-radius: 18px;
+    box-sizing: border-box;
+    background: none;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.566);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.navbar .navitems {
+    width: 50%;
+}
+
+.navbar .navitems ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar .navitems ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 0.3rem 0.8rem;
+    box-sizing: border-box;
+}
+
+.navbar .navitems ul li .navlink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    height: 2rem;
+    padding: 1rem 0.4rem;
+    box-sizing: border-box;
+}
+
+.navbar .navitems ul li .navlink:hover {
+    border-bottom: 1.5px solid white;
+}
+
+.navbar .right .login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .right .login button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    margin: 0 0.5rem;
+    height: 2.4rem;
+    width: 7rem;
+}
+
+.navbar .right .burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.navbar .right .burger .cross{
+    display: none;
+}
+
+.navbar .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile{
+    transition: display 0.8s;
+    display: none;
+}
+
+
+
+
+
+
+
+@media (max-width: 878px) {
+
+    .navbar .navitems ul li {
+        margin: 0.2rem 0.2rem;
+    }
+
+    .navbar .navitems ul li .navlink {
+        height: 2rem;
+        padding: 1rem 0.2rem;
+    }
+
+    .navbar .login button {
+        font-size: 1rem;
+        color: rgb(255, 255, 255);
+        margin: 0 0.2rem;
+        height: 2.1rem;
+        width: 6rem;
+    }
+
+}
+
+@media (max-width: 670px) {
+
+
+    .navbar{
+        justify-content: space-between;
+        padding: 0 0.8rem;
+    }
+
+    .navitems{
+        display: none;
+    }
+
+    .navbar .right .burger {
+        display: block;
+    }
+
+    .navbar .right .burger .burgericon{
+        margin: 0.2rem 0.3rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .mobile{
+        width: 100%;
+        height: 10rem;
+        position: absolute;
+        top: 0px;
+        background-color: rgba(0, 0, 0, 0.795);
+        transition: display 0.5s;
+    }
+
+    .mobile .mobile-navitems{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+
+    .mobile .mobile-navitems ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .mobile .mobile-navitems ul li{
+        list-style: none;
+        margin: 0.3rem 0;
+    }
+    
+    .mobile .mobile-navitems ul li .navlink{
+        list-style: none;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .mobile .mobile-navitems ul li .navlink:hover{
+        border-bottom: 1.5px solid white;
+    }
+    
+    .mobile .cross{
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+
+
+}
