@@ -16,9 +16,9 @@ const UniqueID = () => {
     }, [oldData])
 
 
-    console.log('====================================');
-    console.log(data);
-    console.log('====================================');
+    // console.log('====================================');
+    // console.log(data);
+    // console.log('====================================');
 
 
     const submitDataWithUID = () => {
@@ -31,7 +31,7 @@ const UniqueID = () => {
             return item;
         })
 
-        console.log(newDataWithUID);
+        // console.log(newDataWithUID);
         localStorage.setItem('userData', JSON.stringify(newDataWithUID));
         toast('Successfully Created User Data with UniqueID');
     }

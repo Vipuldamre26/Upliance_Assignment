@@ -36,7 +36,7 @@ const Navbar = () => {
             </div>
 
         
-                <div className="mobile" style={ mobile ? { display: 'block' } : { display: 'none' } }>
+                <div className="mobile" style={ mobile   ? { display: 'block' } : { display: 'none' } }>
                     <RxCross2 className='burgericon cross' onClick={() => setMobile(false)} />
                     <div className="mobile-navitems">
                         <ul>

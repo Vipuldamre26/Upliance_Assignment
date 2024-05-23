@@ -51,9 +51,11 @@
 @media (max-width: 780px) {
     .counter {
         width: 100%;
+        
     }
 
     .counter .counter-main {
+        margin-top: 5rem;
         width: 80%;
     }
 

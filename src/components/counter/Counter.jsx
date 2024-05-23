@@ -23,7 +23,7 @@ const Counter = () => {
 
     const dispatch = useDispatch();
     const counterNum = useSelector((state) => state.counter.data);
-    console.log(counterNum);
+    // console.log(counterNum);
 
     const [num, setNum] = useState(0);
 

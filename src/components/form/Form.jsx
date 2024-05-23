@@ -18,10 +18,9 @@ const Form = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const submitedData = useSelector(state => state.form.data)
-    console.log(submitedData);
+    // console.log(submitedData);
 
 
-    const [ data, setData ] = useState([]);
     const [ isFormFill, setIsFormFill ] = useState(false);
 
     const nameRef = useRef('');
@@ -48,7 +47,7 @@ const Form = () => {
                 address
             }
 
-            console.log(userData);
+            // console.log(userData);
 
             dispatch(submit([userData]));
             localStorage.setItem('userData', JSON.stringify([userData]));
@@ -81,6 +80,10 @@ const Form = () => {
         window.addEventListener('beforeunload', checkBeforeClose);
 
     }, [isFormFill]);
+
+
+    // ************************************************************
+    
 
     
 

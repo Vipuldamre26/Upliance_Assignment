@@ -12,7 +12,7 @@ const JoditEditorComponent = ({config }) => {
     const [value, setValue] = useState('');
     
     const userData = useSelector(state => state.form.data);
-    console.log(userData);
+    // console.log(userData);
 
     if(userData.length !== 0){
         let name = userData[0].name;
