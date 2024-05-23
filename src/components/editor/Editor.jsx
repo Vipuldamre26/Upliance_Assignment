@@ -5,7 +5,15 @@ import JoditEditorComponent from './JoditEditor';
 
 const config = {
     height: 440,
-    buttons: ['bold', 'italic', 'underline', 'lists', 'link']
+    buttons: [
+        'source', '|',
+        'bold', 'italic', 'underline', 
+          '|', '|',
+        'font', 'fontsize', 'paragraph', '|',
+        'link', 
+        'copyformat', 'cut', 'copy', 'paste',  
+        'preview', 'print'
+    ],
 }
 
 
