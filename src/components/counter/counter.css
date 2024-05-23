@@ -1,5 +1,12 @@
 .counter{
-    width: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter .counter-main{
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,8 +15,14 @@
     margin: 0.5rem 0;
 }
 
+.counter .counter-main .chart{
+    width: fit-content;
+    height: 24rem;
+    margin: 0.5rem auto;
+}
+
 .counter .counter-buttons{
-    width: 60%;
+    width: 50%;
     margin: 0.7rem auto;
     padding: 0.4rem;
     display: flex;
@@ -18,6 +31,11 @@
     flex-wrap: wrap;
     gap: 1rem;
     color: rgb(255, 59, 59);
+}
+
+.counter .counter-buttons button{
+    width: 10rem;
+    height: 3rem;
 }
 
 @media (max-width: 780px) {

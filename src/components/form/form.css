@@ -1,13 +1,78 @@
 .form{
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url('../../assets/form-bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 
+.form .form-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    background: transparent;
+    backdrop-filter: blur(18px);
+    width: 40rem;
+    height: 500px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.571);
+}
+
+.form .form-main h1{
+    color: rgb(255, 255, 255);
+}
+
+.form .form-main .inputbox{
+    position: relative;
+    width: 330px;
+    margin: 30px auto;
+    border-bottom: 2px solid #fff;
+}
+
+.form .form-main .inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.form .form-main .inputbox input{
+    width: 100%;
+    height: 48px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 38px 0 5px;
+}
+
+.form .form-main .inputbox .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.form .form-main .inputbox input:focus~label,
+.form .form-main .inputbox input:valid~label{
+    top: -5px;
+}
 
 
-@media (max-width: 780px) {
-    .form{
-        width: 100%;
-    }
+.form .form-main button{
+    width: 10rem;
+    height: 2.4rem;
+    font-size: 1.2rem;
+    color: white;
 }
