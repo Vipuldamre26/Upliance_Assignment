@@ -57,7 +57,7 @@ const Form = () => {
             toast('Redirecting to User Data page');
             setTimeout(() => {
                 navigate('/uniqueid')
-            }, [1500]);
+            }, [1100]);
 
         }
         else{
@@ -79,10 +79,6 @@ const Form = () => {
         } ;
 
         window.addEventListener('beforeunload', checkBeforeClose);
-
-        return () => {
-            window.removeEventListener('beforeunload', checkBeforeClose);
-        };
 
     }, [isFormFill]);
 

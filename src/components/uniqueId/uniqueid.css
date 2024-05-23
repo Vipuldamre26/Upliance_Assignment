@@ -1,5 +1,58 @@
-.uniqueid{
+.uniqueid {
     width: 50%;
+    margin: 5rem auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.uniqueid .userData {
+    /* width: 100%; */
+    padding: 2.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.178);
+}
+
+.uniqueid .userData p,
+strong {
+    width: 80%;
+    margin: 0.4rem auto;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    height: 2.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.817);
+    color: white;
+    font-size: 1.2rem;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+.uniqueid .userData p span {
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uniqueid .userData strong span {
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uniqueid .userData button {
+    width: 10rem;
+    height: 2.6rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
 }
 
 
@@ -10,7 +63,48 @@
 
 
 @media (max-width: 780px) {
-    .uniqueid{
-        width: 100%;
+    .uniqueid {
+        width: 90%;
+        margin: 1rem auto;
+        margin-top: 4rem;
+    }
+
+
+    .uniqueid .userData {
+        /* width: 100%; */
+        padding: 1.5rem 0;
+    }
+
+
+    .uniqueid .userData p,
+    strong {
+        width: 80%;
+        margin: 0.2rem auto;
+        height: 2.3rem;
+        font-size: 0.9rem;
+    }
+
+
+    .uniqueid .userData p span {
+        width: 7rem;
+    }
+
+    .uniqueid .userData strong span {
+        width: 7rem;
+    }
+
+    .uniqueid .userData button {
+        width: 8rem;
+        height: 2.4rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+
+}
+
+@media (max-width: 490px) {
+    .uniqueid .userData .notid{
+        font-size: 1rem;
     }
 }

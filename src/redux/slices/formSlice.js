@@ -4,27 +4,26 @@ import { useEffect } from "react";
 
 let oldData = [];
 
-const getData  = () => {
 
-    if(localStorage.getItem('userData') === null){
+const getOldData = () => {
+
+    if (localStorage.getItem('userData') === null) {
         localStorage.setItem('userData', JSON.stringify([]));
     }
-    else{
+    else {
         oldData = JSON.parse(localStorage.getItem('userData'));
-        // console.log('====================================');
-        // console.log('oldData', oldData);
-        // console.log('====================================');
     }
-    
 
-    useEffect(() => {
-        getData();
-    }, [])
+    return oldData;
+
 }
+
+let getData = getOldData();
+
 
 const formSlice = createSlice({
     name: 'form',
-    initialState: { data: oldData },
+    initialState: { data: getData },
     reducers: {
         submit: (state, action) => {
             state.data = action.payload

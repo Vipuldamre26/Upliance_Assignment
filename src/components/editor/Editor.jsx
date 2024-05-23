@@ -1,17 +1,19 @@
+
 import './editor.css';
+import React, { useState, useRef, useMemo } from 'react';
+import JoditEditorComponent from './JoditEditor';
+
+const config = {
+    height: 440,
+    buttons: ['bold', 'italic', 'underline', 'lists', 'link']
+}
+
 
 const Editor = () => {
-    return(
+
+    return (
         <div className="editor">
-            <h1>Editor</h1>
-            <h1>Editor</h1>
-            <h1>Editor</h1>
-            <h1>Editor</h1>
-            <h1>Editor</h1>
-            <h1>Editor</h1>
-            <h1>Editor</h1>
-            <h1>Editor</h1>
-            <h1>Editor</h1>
+            <JoditEditorComponent config={config} />
         </div>
     )
 }

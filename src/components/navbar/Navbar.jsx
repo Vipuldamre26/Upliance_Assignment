@@ -20,7 +20,7 @@ const Navbar = () => {
             </div>
             <div className="navitems">
                 <ul>
-                    <li><NavLink className='navlink' to='/counter'>Homepage</NavLink></li>
+                    <li><NavLink className='navlink' to='/counter'>Counter</NavLink></li>
                     <li><NavLink className='navlink' to='/form'>Form</NavLink></li>
                     <li><NavLink className='navlink' to='/uniqueid'>UserData</NavLink></li>
                     <li><NavLink className='navlink' to='editor'>Editor</NavLink></li>

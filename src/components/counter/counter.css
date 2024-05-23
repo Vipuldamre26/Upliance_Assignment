@@ -1,28 +1,36 @@
-.counter{
+.counter {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.counter .counter-main{
-    width: 80%;
+.counter .counter-main {
+    width: 45rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
     margin: 0.5rem 0;
+    margin-top: 2rem;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.689);
+    backdrop-filter: blur(8px);
 }
 
-.counter .counter-main .chart{
+.counter .counter-main .chart {
     width: 22rem;
     height: 26rem;
     margin: 0.5rem auto;
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.counter .counter-buttons{
-    width: 50%;
+.counter .counter-buttons {
+    width: 80%;
     margin: 0.7rem auto;
     padding: 0.4rem;
     display: flex;
@@ -33,13 +41,63 @@
     color: rgb(255, 59, 59);
 }
 
-.counter .counter-buttons button{
+.counter .counter-buttons button {
     width: 10rem;
     height: 3rem;
 }
 
+
+
 @media (max-width: 780px) {
-    .counter{
+    .counter {
         width: 100%;
+    }
+
+    .counter .counter-main {
+        width: 80%;
+    }
+
+    .counter .counter-main .chart {
+        width: 65%;
+        height: 19rem;
+    }
+
+
+    .counter .counter-buttons {
+        width: 94%;
+    }
+
+    .counter .counter-buttons button {
+        width: 8rem;
+        height: 2.4rem;
+        font-size: 1rem;
+    }
+}
+
+
+
+@media (max-width: 490px) {
+    .counter {
+        width: 100%;
+    }
+
+    .counter .counter-main {
+        width: 80%;
+    }
+
+    .counter .counter-main .chart {
+        width: 80%;
+        height: 100%;
+    }
+
+
+    .counter .counter-buttons {
+        width: 94%;
+    }
+
+    .counter .counter-buttons button {
+        width: 7rem;
+        height: 1.9rem;
+        font-size: 0.6rem;
     }
 }
