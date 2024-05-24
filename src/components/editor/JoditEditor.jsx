@@ -4,17 +4,20 @@ import { useSelector } from 'react-redux';
 
 
 
-const JoditEditorComponent = ({config }) => {
+const JoditEditorComponent = ({setValue, config }) => {
 
     let allData = '';
     const editor = useRef(null);
 
-    const [value, setValue] = useState('');
     
     const userData = useSelector(state => state.form.data);
+    const editorData = useSelector(state => state.editor.data);
     // console.log(userData);
 
-    if(userData.length !== 0){
+    if(editorData !== ''){
+        allData = editorData;
+    }
+    else if(userData.length !== 0){
         let name = userData[0].name;
         let email = userData[0].email;
         let number = userData[0].number;

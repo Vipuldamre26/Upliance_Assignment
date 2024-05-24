@@ -2,9 +2,11 @@
 import './editor.css';
 import React, { useState, useRef, useMemo } from 'react';
 import JoditEditorComponent from './JoditEditor';
+import { useSelector } from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify';
 
 const config = {
-    height: 440,
+    height: 350,
     buttons: [
         'source', '|',
         'bold', 'italic', 'underline', 
@@ -19,9 +21,23 @@ const config = {
 
 const Editor = () => {
 
+    const [value, setValue] = useState('');
+    const editorData = useSelector(state => state.editor.data);
+    console.log(editorData);
+
+    const saveEditorData = () => {
+
+        let data = value.slice(3, value.length - 4);
+        localStorage.setItem('editorData', JSON.stringify(data));
+        toast('Editor data has been submited');
+    }
+
+
     return (
         <div className="editor">
-            <JoditEditorComponent config={config} />
+            <JoditEditorComponent setValue={setValue} config={config} />
+            <button  onClick={saveEditorData}>Save</button>
+            <ToastContainer />
         </div>
     )
 }
