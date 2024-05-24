@@ -1,8 +1,12 @@
-# React + Vite
+# Apliance Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## [Hosted Link](https://upliance-assignment-gamma.vercel.app/)
+## [GitHub Link](https://github.com/Vipuldamre26/Upliance_Assignment)
 
-Currently, two official plugins are available:
+### Pages: 
+1. Counter Page
+2. Form Page
+3. User Data Page
+4. Rich Text Editor Page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Tech Stack: HTML5, CSS3, JavaScript, ReactJS, React-router, Redux-Toolkit, Chart.js, Jodit-React, React-Toastify, Uniqid and React-icons
