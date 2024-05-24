@@ -52,7 +52,7 @@ const UniqueID = () => {
                         <p><span>Email:</span> {data[0].email}</p>
                         <p><span>Number:</span> {data[0].number}</p>
                         <p><span>Address:</span> {data[0].address}</p>
-                        <strong><span>Unique ID:</span> {uniqueID}</strong>
+                        <strong><span>Unique ID:</span> {data[0].uniqueid ? data[0].uniqueid : uniqueID}</strong>
                         <button onClick={submitDataWithUID}>Submit</button>
                     </>
                 )}
