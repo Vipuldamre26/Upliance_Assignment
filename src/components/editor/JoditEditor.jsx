@@ -15,7 +15,7 @@ const JoditEditorComponent = ({setValue, config }) => {
     // console.log(userData);
 
     if(editorData !== ''){
-        allData = editorData;
+        allData = JSON.stringify(editorData);
     }
     else if(userData.length !== 0){
         let name = userData[0].name;

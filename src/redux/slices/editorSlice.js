@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-let oldEditorData = [];
+let oldEditorData = '';
 
 
 const getOldData = () => {

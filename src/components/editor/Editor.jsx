@@ -27,9 +27,11 @@ const Editor = () => {
 
     const saveEditorData = () => {
 
-        let data = value.slice(3, value.length - 4);
-        localStorage.setItem('editorData', JSON.stringify(data));
-        toast('Editor data has been submited');
+        if(value !== ''){
+            let data = value.slice(3, value.length - 4);
+            localStorage.setItem('editorData', JSON.stringify(data));
+            toast('Editor data has been submited');
+        }
     }
 
 
