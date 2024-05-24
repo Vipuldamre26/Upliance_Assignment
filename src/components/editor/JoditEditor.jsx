@@ -8,14 +8,17 @@ const JoditEditorComponent = ({setValue, config }) => {
 
     let allData = '';
     const editor = useRef(null);
+    let editorData;
 
     
     const userData = useSelector(state => state.form.data);
-    const editorData = useSelector(state => state.editor.data);
     // console.log(userData);
-
+    if(localStorage.getItem('editorData')){
+        editorData = JSON.parse(localStorage.getItem('editorData'));
+    }
+    
     if(editorData !== ''){
-        allData = JSON.stringify(editorData);
+        allData = editorData;
     }
     else if(userData.length !== 0){
         let name = userData[0].name;
@@ -25,11 +28,12 @@ const JoditEditorComponent = ({setValue, config }) => {
         allData = name + " " + email + " " + number + " " + address
     }
     
+    
 
 
     useEffect(() => {
         setValue(userData);
-    },[])
+    },[userData])
 
     return (
         <JoditEditor

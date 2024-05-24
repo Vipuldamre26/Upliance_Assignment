@@ -22,8 +22,6 @@ const config = {
 const Editor = () => {
 
     const [value, setValue] = useState('');
-    const editorData = useSelector(state => state.editor.data);
-    console.log(editorData);
 
     const saveEditorData = () => {
 
@@ -31,6 +29,9 @@ const Editor = () => {
             let data = value.slice(3, value.length - 4);
             localStorage.setItem('editorData', JSON.stringify(data));
             toast('Editor data has been submited');
+        }
+        else{
+            localStorage.setItem('editorData', JSON.stringify(''));
         }
     }
 

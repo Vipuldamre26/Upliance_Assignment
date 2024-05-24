@@ -7,10 +7,10 @@ let oldEditorData = '';
 const getOldData = () => {
 
     if (localStorage.getItem('editorData') === null) {
-        localStorage.setItem('editorData', JSON.stringify([]));
+        localStorage.setItem('editorData', JSON.stringify(''));
     }
     else {
-        oldEditorData = JSON.parse(localStorage.getItem('editorData'));
+        oldEditorData = localStorage.getItem('editorData');
     }
 
     return oldEditorData;
