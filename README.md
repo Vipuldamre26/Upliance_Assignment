@@ -1,4 +1,4 @@
-# Apliance Assignment
+# Upliance Assignment
 
 ## [Hosted Link](https://upliance-assignment-gamma.vercel.app/)
 ## [GitHub Link](https://github.com/Vipuldamre26/Upliance_Assignment)
